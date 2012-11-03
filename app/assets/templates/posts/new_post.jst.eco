@@ -1,0 +1,4 @@
+<div id="new_post">
+  <div id="post_form"></div>
+  <button id="create_post">Save</button>
+</div>

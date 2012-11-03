@@ -1,0 +1,5 @@
+<form>
+  <input id="name" class="post_input" placeholder="Your name">
+  <input id="title" class="post_input" placeholder="Title">
+  <input id="message" class="post_input" placeholder="Message">
+</form>

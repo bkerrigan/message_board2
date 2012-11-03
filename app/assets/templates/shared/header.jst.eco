@@ -1,0 +1,15 @@
+<table class="header">
+  <tr>
+    <td>
+      <h1>Message Board</h1>
+    </td>
+  </tr>
+  <tr id="header_bar">
+    <td>
+      <button id="post_button"><a href="/posts#new">Post</a></button>
+    </td>
+    <td>
+      <button id="list_button"><a href="/posts">List</a></button>
+    </td>
+  </tr>
+</table>
