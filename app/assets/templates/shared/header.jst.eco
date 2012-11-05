@@ -6,10 +6,10 @@
   </tr>
   <tr id="header_bar">
     <td>
-      <button id="post_button"><a href="/posts#new">Post</a></button>
+      <a href="/posts#new"><button id="post_button">Post</button></a>
     </td>
     <td>
-      <button id="list_button"><a href="/posts">List</a></button>
+      <a href="/posts"><button id="list_button">List</button></a>
     </td>
   </tr>
 </table>
