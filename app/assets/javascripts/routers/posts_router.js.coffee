@@ -3,6 +3,7 @@ class MessageBoard2.Routers.Posts extends Backbone.Router
     '': 'index'
     'new': 'newPost'
     ':id/edit': 'editPost'
+    ':id/show': 'showPost'
 
   initialize: () ->
     @posts = new MessageBoard2.Collections.Posts
@@ -10,7 +11,7 @@ class MessageBoard2.Routers.Posts extends Backbone.Router
 
   index: ->
     @showHeader()
-    new MessageBoard2.Views.PostsIndex collection: @posts
+    posts_index = new MessageBoard2.Views.PostsIndex collection: @posts
     @posts.fetch()
 
   newPost: ->
@@ -21,7 +22,12 @@ class MessageBoard2.Routers.Posts extends Backbone.Router
   editPost: (post_id) ->
     @showHeader()
     edit_post = new MessageBoard2.Views.EditPost collection: @posts, post_id: post_id
-    edit_post.render()
+    @posts.fetch()
+
+  showPost: (post_id) ->
+    @showHeader()
+    show_post = new MessageBoard2.Views.ShowPostItem collection: @posts, post_id: post_id
+    @posts.fetch()
 
   showHeader: ->
     header = new MessageBoard2.Views.Header()

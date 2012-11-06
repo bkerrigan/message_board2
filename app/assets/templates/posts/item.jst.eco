@@ -1,12 +1,12 @@
-<div>
-  <table>
-    <tr>
-      <td><a href='/posts#<%= @post.id %>/edit'>Edit</a></td>
-      <td>
+<table>
+  <tr>
+    <td><a href='/posts#<%= @post.id %>/edit'>Edit</a></td>
+    <td>
+      <a href='/posts#<%= @post.id %>/show'>
         <b><%= @post.get 'title'%></b>
         <br/>
         Posted <%= @post.get('created_at') %> by <%= @post.get 'name' %>
-      </td>
-      <td><a class='remove-post'>Remove</a></td>
-  </table>
-</div>
+      </a>
+    </td>
+    <td><a class='remove-post'>Remove</a></td>
+</table>

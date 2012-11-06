@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>
+      <b><%= @post.get 'title'%></b>
+      <br/>
+      Posted <%= @post.get('created_at') %> by <%= @post.get 'name' %>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td><%= @post.get 'message' %></td>
+  </tr>
+  <tr>
+    <td><a href='/posts#<%= @post.id %>/edit'><button>Edit</a></button></td>
+    <td><button><a class='remove-post'>Remove</a></button></td>
+  </tr>
+</table>

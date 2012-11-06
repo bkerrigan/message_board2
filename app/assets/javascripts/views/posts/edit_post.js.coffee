@@ -8,9 +8,10 @@ class MessageBoard2.Views.EditPost extends Backbone.View
   initialize: (options) ->
     @collection = options.collection
     @post_id = options.post_id
-    @post = @collection.get(options.post_id)
+    @collection.bind 'reset', @render, @
 
   render: ->
+    @post = @collection.get(@post_id)
     $(@$el).html(@template())
     data =
       name: @post.get("name")
