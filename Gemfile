@@ -21,6 +21,12 @@ end
 
 gem 'jquery-rails'
 
+# Gems used for testing only needed in developmetn
+group :development do
+  gem 'jasmine'
+  gem 'jasminerice'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
